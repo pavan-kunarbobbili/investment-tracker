@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Investment Tracker</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="app">
+    <h1>Investment Tracker</h1>
+    <div id="auth-section">
+      <input type="email" id="email" placeholder="Email"/>
+      <input type="password" id="password" placeholder="Password"/>
+      <button onclick="login()">Login</button>
+      <button onclick="signup()">Sign Up</button>
+    </div>
+
+    <div id="main" style="display:none;">
+      <h2>Welcome, <span id="user-email"></span></h2>
+      <button onclick="logout()">Logout</button>
+      <h3>Add Entry</h3>
+      <form id="entry-form">
+        <input type="date" id="date" required />
+        <input type="number" id="amount" placeholder="Amount" required />
+        <input type="text" id="reason" placeholder="Reason" required />
+        <select id="type">
+          <option value="investment">Investment</option>
+          <option value="profit">Profit</option>
+        </select>
+        <button type="submit">Add Entry</button>
+      </form>
+      <h3>Entries</h3>
+      <ul id="entry-list"></ul>
+    </div>
+  </div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
